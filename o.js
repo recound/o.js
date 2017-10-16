@@ -273,7 +273,7 @@
         // add a filter
         // +++
         base.filter = base.where = function (filterStr) {
-            var filterVal = checkEmpty(jsToOdata(filterStr));
+            var filterVal = checkEmpty(filterStr);
             if (isQuery('$filter')) {
                 appendQuery('$filter', filterVal, filterVal);
             }
